@@ -10,20 +10,20 @@
 <script src=" https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
 
 <script type="text/babel">
-  function Btn({text, onClick,fontSize=16}) {
+  function Btn(props) {
     return (
       <button
-        onClick={onClick}
+        onClick={props.onClick}
         style={{
           backgroundColor: "tomato",
           color: "white",
           padding: "10px 20px",
           border: 0,
           borderRadius: 10,
-          fontSize,
+          fontSize:props.fontSize,
         }}
       >
-        {text}
+        {props.text}
       </button>
     );
   }
